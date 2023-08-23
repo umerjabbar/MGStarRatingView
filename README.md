@@ -101,17 +101,15 @@ var fillImage: UIImage?
 
 ## Installation
 
-- **For iOS 8+ projects** with [CocoaPods](https://cocoapods.org):
+You can easily integrate MGStarRatingView into your project using Swift Package Manager.
 
-```ruby
-pod 'MGStarRatingView', '~> 1.0.0'
-```
+### Swift Package Manager
 
-- **For iOS 8+ projects** with [Carthage](https://github.com/Carthage/Carthage):
+1. In Xcode, open your project.
 
-```ruby
-github "magi82/MGStarRatingView" ~> 1.0.0
-```
+2. Click on "File" > "Swift Packages" > "Add Package Dependency".
+
+3. In the "Choose Package Repository" dialog, enter the following URL:
 
 ## Author
 
