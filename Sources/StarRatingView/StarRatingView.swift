@@ -41,7 +41,7 @@ public enum StarRatingType {
     }
 }
 
-public protocol StarRatingDelegate: class {
+public protocol StarRatingDelegate: AnyObject {
     func StarRatingValueChanged(view: StarRatingView, value: CGFloat)
 }
 
@@ -397,19 +397,7 @@ public class StarRatingView: UIView {
     
     /// Flip the View to support Right to Left Languages based on the view semantic
     func flipViewIfNeeded() {
-        var direction: UIUserInterfaceLayoutDirection
-        if #available(iOS 10.0, *) {
-            direction = self.effectiveUserInterfaceLayoutDirection
-        } else { // Fallback on earlier versions
-            if #available(iOS 9.0, *) {
-                // The view is shown in right-to-left mode right now.
-                direction = UIView.userInterfaceLayoutDirection(for: self.semanticContentAttribute)
-            } else { // Fallback on earlier versions
-                direction = UIApplication.shared.userInterfaceLayoutDirection
-            }
-        }
-        
-        if case .rightToLeft = direction {
+        if case .rightToLeft = effectiveUserInterfaceLayoutDirection {
             flip()
         }
     }

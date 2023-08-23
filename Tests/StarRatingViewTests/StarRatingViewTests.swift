@@ -1,6 +1,6 @@
 //
-//  MGStarRatingViewTests.swift
-//  MGStarRatingViewTests
+//  StarRatingViewTests.swift
+//  StarRatingViewTests
 //
 //  Created by 황병국 on 30/05/2017.
 //  Copyright © 2017 magi. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class MGStarRatingViewTests: XCTestCase {
+class StarRatingViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
